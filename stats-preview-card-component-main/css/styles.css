@@ -7,18 +7,50 @@
   --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
 }
 
+/* Global Styles
+/* ------------------------------- */
+html {
+  background-color: var(--Very-dark-blue-mainBG);
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
 }
 
 main {
-  background-color: var(--Very-dark-blue-main);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+.main-box {
+  background-color: var(--Dark-desaturated-blue-cardBG);
+
+  /* background-color: var(Soft-violet-accent); */
+  max-width: 300px;
+  border-radius: 15px;
+  min-height: 92vh;
+  /* mix-blend-mode: multiply; */
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+
+  /* opacity: 0.1; */
+}
+
+.image-box {
+  /* position: relative; */
+  /* background-blend-mode: multiply; */
+  /* border-radius: 15px; */
+  /* max-width: 100%; */
 }
 
 /* Attribution section
