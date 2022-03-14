@@ -7,50 +7,88 @@
   --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
 }
 
-/* Global Styles
+/* Body Styles
 /* ------------------------------- */
-html {
-  background-color: var(--Very-dark-blue-mainBG);
-  margin: 0;
-  padding: 0;
-}
 
 body {
   font-family: "Inter", sans-serif;
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
-}
 
-main {
+  background-color: var(--Very-dark-blue-mainBG);
+
+  margin: 10px;
+  padding: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.main-box {
+/* Main / Card Styles
+/* ------------------------------- */
+
+main {
   background-color: var(--Dark-desaturated-blue-cardBG);
 
-  /* background-color: var(Soft-violet-accent); */
-  max-width: 300px;
+  max-width: 320px;
   border-radius: 15px;
   min-height: 92vh;
-  /* mix-blend-mode: multiply; */
+
+  margin-bottom: 30px;
+}
+
+/* Image Styles
+/* ------------------------------- */
+
+.image-box {
+  background-color: var(--Soft-violet-accent);
+  border-radius: 15px 15px 0px 0px;
 }
 
 img {
   display: block;
   width: 100%;
-  border-radius: 15px;
-
-  /* opacity: 0.1; */
+  mix-blend-mode: multiply;
 }
 
-.image-box {
-  /* position: relative; */
-  /* background-blend-mode: multiply; */
-  /* border-radius: 15px; */
-  /* max-width: 100%; */
+/* Copy (h1 and p) section
+------------------------------------- */
+
+h1 {
+  color: var(--White-main-heading-stats);
+  padding: 0 15px 0 15px;
+  text-align: center;
+}
+
+span {
+  color: var(--Soft-violet-accent);
+}
+
+.main-copy p {
+  color: var(--Slightly-transparent-white-main-para);
+  padding: 0 15px 0 15px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Stats section
+------------------------------------- */
+.main-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-stats h1 {
+  margin-bottom: 0;
+}
+.main-stats p {
+  color: var(--Slightly-transparent-white-stat-headings);
+  text-transform: uppercase;
+  margin: 0;
 }
 
 /* Attribution section
