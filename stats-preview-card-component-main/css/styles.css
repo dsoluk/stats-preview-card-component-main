@@ -10,6 +10,7 @@
 /* Body Styles
 /* ------------------------------- */
 
+/* html, */
 body {
   font-family: "Inter", sans-serif;
   font-family: "Lexend Deca", sans-serif;
@@ -17,40 +18,64 @@ body {
 
   background-color: var(--Very-dark-blue-mainBG);
 
-  margin: 10px;
+  margin: 10%;
   padding: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Main / Card Styles
 /* ------------------------------- */
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
   background-color: var(--Dark-desaturated-blue-cardBG);
 
-  max-width: 320px;
+  max-width: 800px;
+  min-width: 320px;
   border-radius: 15px;
-  min-height: 92vh;
+  /* min-height: 100vh; */
+  /* margin: 10%; */
 
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 /* Image Styles
 /* ------------------------------- */
 
 .image-box {
+  /* display: block; */
   background-color: var(--Soft-violet-accent);
-  border-radius: 15px 15px 0px 0px;
+  /* border-radius: 15px 15px 0px 0px; */
+  /* position: relative; */
+  /* overflow: fill; */
+  /* object-fit: fill; */
+  /* margin: 0; */
+  flex: 1;
 }
 
 img {
   display: block;
   width: 100%;
   mix-blend-mode: multiply;
+  /* position: relative; */
+  /* overflow: fill; */
+  /* object-fit: fill; */
+  /* margin: 0; */
+}
+
+/* Non Image box Styles
+/* ------------------------------- */
+
+.non-image-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 /* Copy (h1 and p) section
@@ -60,6 +85,8 @@ h1 {
   color: var(--White-main-heading-stats);
   padding: 0 15px 0 15px;
   text-align: center;
+
+  margin: 10%;
 }
 
 span {
@@ -68,9 +95,9 @@ span {
 
 .main-copy p {
   color: var(--Slightly-transparent-white-main-para);
-  padding: 0 15px 0 15px;
-  text-align: center;
-  margin-bottom: 0;
+  /* padding: 0 15px 0 15px; */
+  /* text-align: center; */
+  margin: 10%;
 }
 
 /* Stats section
@@ -88,15 +115,31 @@ span {
 .main-stats p {
   color: var(--Slightly-transparent-white-stat-headings);
   text-transform: uppercase;
-  margin: 0;
+  /* margin: 0; */
 }
 
 /* Attribution section
 ------------------------------------- */
-.attribution {
+footer {
   font-size: 11px;
   text-align: center;
 }
-.attribution a {
+footer a {
   color: hsl(228, 45%, 44%);
 }
+
+/* Media queries for desktop section
+------------------------------------- */
+
+/* On screens that are 800px or more, set the  */
+/* @media screen and (min-width: 800px) {
+  main {
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: 20%;
+  }
+
+  .main-stats {
+    flex-direction: row;
+  }
+} */
