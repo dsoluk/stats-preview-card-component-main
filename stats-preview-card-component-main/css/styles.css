@@ -9,86 +9,115 @@
 
 /* Body Styles
 /* ------------------------------- */
+html {
+  background-color: var(--Very-dark-blue-mainBG);
+
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: "Inter", sans-serif;
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
 
-  background-color: var(--Very-dark-blue-mainBG);
-
-  margin: 10px;
-  padding: 0;
-
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 250px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "image"
+    "copy"
+    "stats";
   justify-content: center;
   align-items: center;
+
+  box-sizing: border-box;
 }
 
 /* Main / Card Styles
 /* ------------------------------- */
 
-main {
-  background-color: var(--Dark-desaturated-blue-cardBG);
+.grid-card {
+  /* margin: 4% 40% 2% 40%; */
+  /* min-height: auto; */
+  /* width: 300px; */
+  /* margin: 0; */
 
-  max-width: 320px;
   border-radius: 15px;
-  min-height: 92vh;
 
-  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: cover;
 }
 
 /* Image Styles
 /* ------------------------------- */
 
 .image-box {
+  grid-area: image;
   background-color: var(--Soft-violet-accent);
   border-radius: 15px 15px 0px 0px;
 }
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   mix-blend-mode: multiply;
+  /* height: 100%; */
 }
 
 /* Copy (h1 and p) section
 ------------------------------------- */
-
-h1 {
-  color: var(--White-main-heading-stats);
-  padding: 0 15px 0 15px;
+.main-copy {
+  grid-area: copy;
   text-align: center;
+  padding: 0 15px 0 15px;
+  background-color: var(--Dark-desaturated-blue-cardBG);
+}
+.main-copy > h1 {
+  color: var(--White-main-heading-stats);
 }
 
-span {
+h1 > span {
   color: var(--Soft-violet-accent);
 }
 
-.main-copy p {
+.main-copy > p {
   color: var(--Slightly-transparent-white-main-para);
-  padding: 0 15px 0 15px;
-  text-align: center;
-  margin-bottom: 0;
+  font-size: smaller;
 }
 
 /* Stats section
 ------------------------------------- */
 .main-stats {
+  background-color: var(--Dark-desaturated-blue-cardBG);
+  grid-area: stats;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 0 0 12px 12px;
 }
 
-.main-stats h1 {
-  margin-bottom: 0;
+.stats {
+  text-align: center;
 }
-.main-stats p {
+
+.stats > h1 {
+  color: var(--White-main-heading-stats);
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.stats > p {
   color: var(--Slightly-transparent-white-stat-headings);
+  font-size: smaller;
   text-transform: uppercase;
-  margin: 0;
+  margin-top: 0;
 }
 
 /* Attribution section
@@ -99,4 +128,43 @@ span {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+/* Media Query for desktop screen sizes
+------------------------------------- */
+@media screen and (min-width: 800px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat (2, 400px);
+    grid-template-rows: 200px 100px;
+    grid-template-areas:
+      "copy image "
+      "stats image";
+    justify-content: left;
+    align-items: left;
+
+    box-sizing: border-box;
+
+    margin: 40px;
+  }
+  .grid-card {
+    /* margin: auto; */
+    height: 100vh;
+
+    width: 800px;
+
+    overflow: cover;
+  }
+
+  .main-copy {
+    /* padding: 0; */
+    text-align: left;
+  }
+
+  .main-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* text-align: left; */
+    border-radius: 0 0 0 12px;
+  }
 }
